@@ -3,34 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cine - Promociones</title>
+    <title>Cinepolis - Promociones</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <img
         src="https://logodownload.org/wp-content/uploads/2017/11/cinepolis-logo-2.png"
-        alt="Logo Cinepolis"
+        alt="Cinepolis Logo"
         class="logo"
       />
       <nav>
-        <a href="index.html">Inicio</a>
-        <a href="cartelera.html">Cartelera</a>
-        <a href="promociones.html">Promociones</a>
-        <a href="proximamente.html">Próximamente</a>
-        <a href="contacto.html">Contacto</a>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="cartelera.html">Cartelera</a></li>
+          <li><a href="promociones.html">Promociones</a></li>
+          <li><a href="proximamente.html">Próximamente</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
       </nav>
     </header>
     <main>
-      <section class="promociones">
-        <h1>Promociones</h1>
-        <img src="" alt="" class="" />
-        <p>Los niños menores de 10 años entran gratis!</p>
-        <button onclick="verificarEdad()">Verifica tu Edad</button>
-        <div id="popup" class="popup">
-          <p id="popupMessage"></p>
-        </div>
-      </section>
+      <h1>Promociones</h1>
+      <img
+        src="https://logodownload.org/wp-content/uploads/2017/11/cinepolis-logo-2.png"
+        alt="Cinepolis Logo"
+        class="promo-image"
+      />
+      <p>¡Niños menores de 10 años entran gratis!</p>
+      <form id="promo-form">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" required />
+        <label for="age">Edad:</label>
+        <input type="number" id="age" required />
+        <button type="submit">Verificar Promoción</button>
+      </form>
     </main>
     <script src="./main.js"></script>
   </body>
