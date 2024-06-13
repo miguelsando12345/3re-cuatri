@@ -1,14 +1,19 @@
-function checkAge() {
-  const name = prompt("Introduce tu nombre:");
-  const age = prompt("Introduce tu edad:");
+function verificarEdad() {
+  const nombre = prompt("Por favor, ingresa tu nombre:");
+  const edad = prompt("Por favor, ingresa tu edad:");
 
-  if (age < 10) {
-    alert(
-      `¡Hola ${name}! Como eres menor de 10 años, tienes unas palomitas gratis.`
-    );
+  const popup = document.getElementById("popup");
+  const mensaje = document.getElementById("popupMessage");
+
+  if (edad < 10) {
+    mensaje.textContent = `${nombre}, ¡tienes palomitas gratis!`;
   } else {
-    alert(
-      `Lo siento ${name}, esta promoción es solo para niños menores de 10 años.`
-    );
+    mensaje.textContent = `Lo siento ${nombre}, esta promoción es solo para niños menores de 10 años.`;
   }
+
+  popup.style.display = "block";
+
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 5000);
 }

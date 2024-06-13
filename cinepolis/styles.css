@@ -1,71 +1,91 @@
 body {
   font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
+  color: #333;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 10px;
+  background-color: #002d72;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
 }
 
-header img {
-  height: 50px;
-  margin-right: 20px;
+header .logo {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav ul li {
-  margin-right: 20px;
-}
-
-nav ul li a {
-  color: #fff;
+nav a {
+  color: white;
   text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 main {
   padding: 20px;
+}
+
+.inicio,
+.cartelera,
+.promociones,
+.proximamente,
+.contacto {
   text-align: center;
 }
 
-.movie-gallery {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.movie {
-  margin: 10px;
-}
-
-.movie img {
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-}
-
-.trailer {
+.main-image,
+.promo-image {
+  width: 100%;
+  max-width: 800px;
   margin: 20px 0;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #ff0;
-  border: none;
-  cursor: pointer;
+.movies,
+.trailers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-button:hover {
-  background-color: #ffa500;
+.movie,
+.trailer {
+  flex: 1;
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.movie img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #002d72;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup p {
+  margin: 0;
+}
+
+#popupMessage {
+  font-size: 1.2em;
 }
